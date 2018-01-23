@@ -1,14 +1,8 @@
 #include <iostream>
 
-#define PI 3.1415
+#include "circle.hpp"
+#include "square.hpp"
 
-float square_area(float side) {
-  return side * side;
-}
-
-float circle_area(float radius) {
-  return PI * radius * radius;
-}
 
 int main(int argc, char** argv) {
 
