@@ -1,7 +1,13 @@
 all: main
 
-main: main.cpp circle.cpp square.cpp circle.hpp square.hpp
-	g++ main.cpp circle.cpp square.cpp -o main
+circle.o: circle.cpp circle.hpp
+	g++ -c circle.cpp -o circle.o
+
+square.o: square.cpp square.hpp
+	g++ -c square.cpp -o square.o
+
+main: main.cpp circle.o square.o
+	g++ main.cpp circle.o square.o -o main
 
 clean:
-	rm -f main
+	rm -f main circle.o square.o
